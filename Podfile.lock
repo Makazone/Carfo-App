@@ -1,0 +1,15 @@
+PODS:
+  - Result (2.0.0)
+  - SQLite.swift (0.10.1)
+
+DEPENDENCIES:
+  - Result
+  - SQLite.swift
+
+SPEC CHECKSUMS:
+  Result: 66ec7f3949361e623f86faec1835bc3e6fa1bb59
+  SQLite.swift: 76e6b3be6c520bc9f258c4dbccf8ad9c5739d81e
+
+PODFILE CHECKSUM: a75895ac392198c7b72cd1f5a057b7eb4f843938
+
+COCOAPODS: 1.0.1
