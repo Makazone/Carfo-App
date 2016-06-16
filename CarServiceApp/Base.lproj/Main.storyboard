@@ -74,10 +74,136 @@
                     <navigationItem key="navigationItem" title="Inquiry List" id="UaL-gj-hc2">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="sIm-SF-mmD"/>
                     </navigationItem>
+                    <connections>
+                        <segue destination="5ZB-4d-xeF" kind="show" identifier="showInquiryDetail" id="zMm-zM-rls"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="925" y="325"/>
+            <point key="canvasLocation" x="908" y="320"/>
+        </scene>
+        <!--Inquiry Detail-->
+        <scene sceneID="tFR-mK-LsA">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="5ZB-4d-xeF" customClass="InquiryDetailVC" customModule="CarServiceApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UiE-ry-Vcg"/>
+                        <viewControllerLayoutGuide type="bottom" id="dYI-Wl-7oK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aoa-3h-7my">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4WZ-LV-5Os">
+                                <rect key="frame" x="0.0" y="74" width="600" height="526"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ClientCell" id="a0h-gR-Wv3" customClass="ClientCell" customModule="CarServiceApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="55"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a0h-gR-Wv3" id="u5c-to-Fsw">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="54"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E0k-sW-YHa">
+                                                    <rect key="frame" x="8" y="2" width="50" height="50"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="U2O-ro-aCm"/>
+                                                        <constraint firstAttribute="width" constant="50" id="lmY-aC-F1V"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5mx-LG-Of2">
+                                                    <rect key="frame" x="73" y="16" width="519" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="5mx-LG-Of2" firstAttribute="centerY" secondItem="u5c-to-Fsw" secondAttribute="centerY" id="Nwh-U7-OY8"/>
+                                                <constraint firstItem="E0k-sW-YHa" firstAttribute="leading" secondItem="u5c-to-Fsw" secondAttribute="leadingMargin" id="PB0-nD-fCR"/>
+                                                <constraint firstItem="E0k-sW-YHa" firstAttribute="centerY" secondItem="u5c-to-Fsw" secondAttribute="centerY" id="g6g-db-tMk"/>
+                                                <constraint firstItem="5mx-LG-Of2" firstAttribute="leading" secondItem="E0k-sW-YHa" secondAttribute="trailing" constant="15" id="hiN-0t-0Qj"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="5mx-LG-Of2" secondAttribute="trailing" id="xhB-TP-08e"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="userPic" destination="E0k-sW-YHa" id="sls-Lp-byz"/>
+                                            <outlet property="username" destination="5mx-LG-Of2" id="ZGO-SJ-Sdk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CarCell" id="eQ6-qG-jPz" customClass="CarCell" customModule="CarServiceApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="83" width="600" height="55"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eQ6-qG-jPz" id="wz5-cs-i6g">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="54"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lno-gc-HVc">
+                                                    <rect key="frame" x="8" y="16" width="574" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="lno-gc-HVc" secondAttribute="trailing" constant="10" id="bDU-gc-pO3"/>
+                                                <constraint firstItem="lno-gc-HVc" firstAttribute="centerY" secondItem="wz5-cs-i6g" secondAttribute="centerY" id="jkY-Qg-V3g"/>
+                                                <constraint firstItem="lno-gc-HVc" firstAttribute="leading" secondItem="wz5-cs-i6g" secondAttribute="leadingMargin" id="yg3-vh-vbI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="label" destination="lno-gc-HVc" id="APS-Hb-VZM"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="InvoiceCell" id="eCj-BJ-kYr" customClass="InvoiceCell" customModule="CarServiceApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="138" width="600" height="55"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eCj-BJ-kYr" id="7JS-Yz-XKb">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="54"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5HF-8y-4gL">
+                                                    <rect key="frame" x="8" y="16" width="574" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="5HF-8y-4gL" firstAttribute="leading" secondItem="7JS-Yz-XKb" secondAttribute="leadingMargin" id="Vht-5l-aU5"/>
+                                                <constraint firstItem="5HF-8y-4gL" firstAttribute="centerY" secondItem="7JS-Yz-XKb" secondAttribute="centerY" id="c3i-g8-hyt"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="5HF-8y-4gL" secondAttribute="trailing" constant="10" id="h7j-sg-wGB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="label" destination="5HF-8y-4gL" id="A2N-ig-bI6"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="5ZB-4d-xeF" id="1vP-RM-cAZ"/>
+                                    <outlet property="delegate" destination="5ZB-4d-xeF" id="wam-ea-f72"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="4WZ-LV-5Os" secondAttribute="trailing" id="0kj-lo-V57"/>
+                            <constraint firstItem="4WZ-LV-5Os" firstAttribute="top" secondItem="UiE-ry-Vcg" secondAttribute="bottom" constant="10" id="rDB-c7-319"/>
+                            <constraint firstItem="4WZ-LV-5Os" firstAttribute="leading" secondItem="aoa-3h-7my" secondAttribute="leading" id="tWK-Lt-sTB"/>
+                            <constraint firstItem="dYI-Wl-7oK" firstAttribute="top" secondItem="4WZ-LV-5Os" secondAttribute="bottom" id="uk5-9I-LDn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Inquiry Detail" id="diS-V8-nzT"/>
+                    <connections>
+                        <outlet property="tableView" destination="4WZ-LV-5Os" id="Ecf-1B-Ou3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DYc-QS-d9n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1751" y="325"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="x8S-Ob-USH">
