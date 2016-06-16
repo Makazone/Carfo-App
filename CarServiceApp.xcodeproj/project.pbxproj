@@ -17,8 +17,9 @@
 		CA8E02CA1D12175000F50B70 /* InquiryGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8E02A91D1213AC00F50B70 /* InquiryGateway.swift */; };
 		CA8E02CB1D12175500F50B70 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8E02A51D12110300F50B70 /* DBManager.swift */; };
 		CA8E02CC1D12175C00F50B70 /* Inquiry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8E02A31D12109C00F50B70 /* Inquiry.swift */; };
+		CA8E02CF1D12200300F50B70 /* InquiryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8E02CE1D12200300F50B70 /* InquiryCell.swift */; };
 		CAFD62E31D11AD5400926848 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFD62E21D11AD5400926848 /* AppDelegate.swift */; };
-		CAFD62E51D11AD5400926848 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFD62E41D11AD5400926848 /* ViewController.swift */; };
+		CAFD62E51D11AD5400926848 /* InquiryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFD62E41D11AD5400926848 /* InquiryVC.swift */; };
 		CAFD62E81D11AD5400926848 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAFD62E61D11AD5400926848 /* Main.storyboard */; };
 		CAFD62EA1D11AD5400926848 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAFD62E91D11AD5400926848 /* Assets.xcassets */; };
 		CAFD62ED1D11AD5400926848 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAFD62EB1D11AD5400926848 /* LaunchScreen.storyboard */; };
@@ -49,9 +50,10 @@
 		CA8E02B31D1215D800F50B70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA8E02B91D12160E00F50B70 /* CarServiceAppTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CarServiceAppTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		CA8E02BA1D12160E00F50B70 /* TestInquiry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestInquiry.swift; sourceTree = "<group>"; };
+		CA8E02CE1D12200300F50B70 /* InquiryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InquiryCell.swift; sourceTree = "<group>"; };
 		CAFD62DF1D11AD5400926848 /* CarServiceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarServiceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAFD62E21D11AD5400926848 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CAFD62E41D11AD5400926848 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CAFD62E41D11AD5400926848 /* InquiryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InquiryVC.swift; sourceTree = "<group>"; };
 		CAFD62E71D11AD5400926848 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CAFD62E91D11AD5400926848 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAFD62EC1D11AD5400926848 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -101,7 +103,7 @@
 		CA8E029C1D12069D00F50B70 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CAFD62E41D11AD5400926848 /* ViewController.swift */,
+				CAFD62E41D11AD5400926848 /* InquiryVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -144,6 +146,7 @@
 		CA8E02A11D1206EC00F50B70 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CA8E02CD1D121FFB00F50B70 /* Cell */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -165,6 +168,14 @@
 				CA8E02B91D12160E00F50B70 /* CarServiceAppTests-Bridging-Header.h */,
 			);
 			path = CarServiceAppTests;
+			sourceTree = "<group>";
+		};
+		CA8E02CD1D121FFB00F50B70 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CA8E02CE1D12200300F50B70 /* InquiryCell.swift */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		CAFD62D61D11AD5400926848 = {
@@ -414,9 +425,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAFD62E51D11AD5400926848 /* ViewController.swift in Sources */,
+				CAFD62E51D11AD5400926848 /* InquiryVC.swift in Sources */,
 				CA8E02A41D12109C00F50B70 /* Inquiry.swift in Sources */,
 				CAFD62E31D11AD5400926848 /* AppDelegate.swift in Sources */,
+				CA8E02CF1D12200300F50B70 /* InquiryCell.swift in Sources */,
 				CA8E02AA1D1213AC00F50B70 /* InquiryGateway.swift in Sources */,
 				CA8E02A61D12110300F50B70 /* DBManager.swift in Sources */,
 			);
