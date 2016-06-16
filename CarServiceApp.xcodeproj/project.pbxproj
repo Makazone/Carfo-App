@@ -28,6 +28,11 @@
 		CA8E02DC1D1228EB00F50B70 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8E02DA1D1227B300F50B70 /* Car.swift */; };
 		CA8E02DD1D1228F000F50B70 /* CarGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8E02D81D12277E00F50B70 /* CarGateway.swift */; };
 		CA8E02DF1D1228FA00F50B70 /* TestCar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8E02DE1D1228FA00F50B70 /* TestCar.swift */; };
+		CA8E02E11D12296E00F50B70 /* Invoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8E02E01D12296E00F50B70 /* Invoice.swift */; };
+		CA8E02E31D122A8F00F50B70 /* InvoiceGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8E02E21D122A8F00F50B70 /* InvoiceGateway.swift */; };
+		CA8E02E51D122C1B00F50B70 /* TestInvoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8E02E41D122C1B00F50B70 /* TestInvoice.swift */; };
+		CA8E02E61D122C1E00F50B70 /* Invoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8E02E01D12296E00F50B70 /* Invoice.swift */; };
+		CA8E02E71D122C2100F50B70 /* InvoiceGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8E02E21D122A8F00F50B70 /* InvoiceGateway.swift */; };
 		CAFD62E31D11AD5400926848 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFD62E21D11AD5400926848 /* AppDelegate.swift */; };
 		CAFD62E51D11AD5400926848 /* InquiryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFD62E41D11AD5400926848 /* InquiryVC.swift */; };
 		CAFD62E81D11AD5400926848 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAFD62E61D11AD5400926848 /* Main.storyboard */; };
@@ -67,6 +72,9 @@
 		CA8E02D81D12277E00F50B70 /* CarGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarGateway.swift; sourceTree = "<group>"; };
 		CA8E02DA1D1227B300F50B70 /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		CA8E02DE1D1228FA00F50B70 /* TestCar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestCar.swift; sourceTree = "<group>"; };
+		CA8E02E01D12296E00F50B70 /* Invoice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Invoice.swift; sourceTree = "<group>"; };
+		CA8E02E21D122A8F00F50B70 /* InvoiceGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvoiceGateway.swift; sourceTree = "<group>"; };
+		CA8E02E41D122C1B00F50B70 /* TestInvoice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestInvoice.swift; sourceTree = "<group>"; };
 		CAFD62DF1D11AD5400926848 /* CarServiceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarServiceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAFD62E21D11AD5400926848 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAFD62E41D11AD5400926848 /* InquiryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InquiryVC.swift; sourceTree = "<group>"; };
@@ -130,6 +138,7 @@
 				CA8E02A31D12109C00F50B70 /* Inquiry.swift */,
 				CA8E02D01D1223E500F50B70 /* Client.swift */,
 				CA8E02DA1D1227B300F50B70 /* Car.swift */,
+				CA8E02E01D12296E00F50B70 /* Invoice.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -176,6 +185,7 @@
 				CA8E02A91D1213AC00F50B70 /* InquiryGateway.swift */,
 				CA8E02D21D1224B500F50B70 /* ClientGateway.swift */,
 				CA8E02D81D12277E00F50B70 /* CarGateway.swift */,
+				CA8E02E21D122A8F00F50B70 /* InvoiceGateway.swift */,
 			);
 			name = Library;
 			sourceTree = "<group>";
@@ -188,6 +198,7 @@
 				CA8E02B91D12160E00F50B70 /* CarServiceAppTests-Bridging-Header.h */,
 				CA8E02D41D1226DE00F50B70 /* TestClient.swift */,
 				CA8E02DE1D1228FA00F50B70 /* TestCar.swift */,
+				CA8E02E41D122C1B00F50B70 /* TestInvoice.swift */,
 			);
 			path = CarServiceAppTests;
 			sourceTree = "<group>";
@@ -437,6 +448,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA8E02D51D1226DE00F50B70 /* TestClient.swift in Sources */,
+				CA8E02E61D122C1E00F50B70 /* Invoice.swift in Sources */,
 				CA8E02D71D1226E700F50B70 /* Client.swift in Sources */,
 				CA8E02DC1D1228EB00F50B70 /* Car.swift in Sources */,
 				CA8E02CA1D12175000F50B70 /* InquiryGateway.swift in Sources */,
@@ -445,6 +457,8 @@
 				CA8E02DD1D1228F000F50B70 /* CarGateway.swift in Sources */,
 				CA8E02CB1D12175500F50B70 /* DBManager.swift in Sources */,
 				CA8E02BB1D12160E00F50B70 /* TestInquiry.swift in Sources */,
+				CA8E02E51D122C1B00F50B70 /* TestInvoice.swift in Sources */,
+				CA8E02E71D122C2100F50B70 /* InvoiceGateway.swift in Sources */,
 				CA8E02D61D1226E400F50B70 /* ClientGateway.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -459,10 +473,12 @@
 				CA8E02A41D12109C00F50B70 /* Inquiry.swift in Sources */,
 				CAFD62E31D11AD5400926848 /* AppDelegate.swift in Sources */,
 				CA8E02CF1D12200300F50B70 /* InquiryCell.swift in Sources */,
+				CA8E02E31D122A8F00F50B70 /* InvoiceGateway.swift in Sources */,
 				CA8E02D91D12277E00F50B70 /* CarGateway.swift in Sources */,
 				CA8E02AA1D1213AC00F50B70 /* InquiryGateway.swift in Sources */,
 				CA8E02A61D12110300F50B70 /* DBManager.swift in Sources */,
 				CA8E02D31D1224B500F50B70 /* ClientGateway.swift in Sources */,
+				CA8E02E11D12296E00F50B70 /* Invoice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
